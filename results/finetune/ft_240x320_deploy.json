@@ -1,0 +1,98 @@
+{
+ "ckpt": "~/mentorpi/finetune/runs/snap_20261029_1419/main_trainABC_s0/model_final.pth",
+ "hw": [
+  240,
+  320
+ ],
+ "ort": "1.23.2",
+ "torch": "2.8.0+cpu",
+ "quant": "QDQ S8S8 per-channel, Conv/MatMul/Gemm, Percentile 99.999",
+ "calib_n": 48,
+ "calib_sec": 23.1,
+ "nodes": {
+  "int8_QuantizeLinear": 192,
+  "int8_Erf": 8,
+  "int8_gelu_Gelu": 8,
+  "int8_gelu_Erf": 0
+ },
+ "MB": {
+  "fp32": 14.32,
+  "int8_gelu": 4.19
+ },
+ "results": {
+  "torch_fp32": {
+   "floor_iou": 0.9748,
+   "contact_recall@50": 0.9608,
+   "contact_notfloor_frac_mean": 0.9019,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "23/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "5/5"
+   },
+   "freespace_abs_err_cm_median": 1.9,
+   "freespace_abs_err_cm_p90": 15.3,
+   "danger_cols_over10cm": 0.0325,
+   "n_cols": 17010
+  },
+  "ort_fp32": {
+   "floor_iou": 0.9748,
+   "contact_recall@50": 0.9608,
+   "contact_notfloor_frac_mean": 0.9019,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "23/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "5/5"
+   },
+   "freespace_abs_err_cm_median": 1.9,
+   "freespace_abs_err_cm_p90": 15.3,
+   "danger_cols_over10cm": 0.0325,
+   "n_cols": 17010,
+   "max_abs_logit_diff_vs_torch": 0.0,
+   "pixel_agree_vs_torch": 1.0
+  },
+  "ort_int8": {
+   "floor_iou": 0.9771,
+   "contact_recall@50": 0.9412,
+   "contact_notfloor_frac_mean": 0.8712,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "22/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "5/5"
+   },
+   "freespace_abs_err_cm_median": 1.7,
+   "freespace_abs_err_cm_p90": 15.3,
+   "danger_cols_over10cm": 0.0482,
+   "n_cols": 17010,
+   "max_abs_logit_diff_vs_torch": 4.5125,
+   "pixel_agree_vs_torch": 0.99747
+  },
+  "ort_int8_gelu": {
+   "floor_iou": 0.9771,
+   "contact_recall@50": 0.9412,
+   "contact_notfloor_frac_mean": 0.8712,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "22/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "5/5"
+   },
+   "freespace_abs_err_cm_median": 1.7,
+   "freespace_abs_err_cm_p90": 15.3,
+   "danger_cols_over10cm": 0.0482,
+   "n_cols": 17010,
+   "max_abs_logit_diff_vs_torch": 4.5125,
+   "pixel_agree_vs_torch": 0.99747
+  }
+ }
+}

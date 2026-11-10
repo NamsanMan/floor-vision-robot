@@ -1,0 +1,13 @@
+{
+  "label": "seg_pt",
+  "duration_s": 30.0,
+  "messages": 46,
+  "hz": 1.54,
+  "period_ms_mean": 647.9,
+  "period_ms_p95": 813.0,
+  "capture_to_detection_ms_mean": 688.9,
+  "capture_to_detection_ms_p95": 854.6,
+  "frames_with_detection_pct": 0.0,
+  "detections_by_class": {},
+  "best_score": {}
+}

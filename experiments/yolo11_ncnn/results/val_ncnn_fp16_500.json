@@ -1,0 +1,16 @@
+{
+  "variant": "ncnn_fp16",
+  "subset": "500",
+  "images": 500,
+  "mAP50-95": 0.42635,
+  "mAP50": 0.58036,
+  "precision": 0.63838,
+  "recall": 0.54301,
+  "speed_ms": {
+    "preprocess": 2.56,
+    "inference": 118.58,
+    "loss": 0.0,
+    "postprocess": 4.53
+  },
+  "wall_min": 1.1
+}

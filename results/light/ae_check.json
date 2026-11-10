@@ -1,0 +1,89 @@
+{
+ "frames": 1136,
+ "duration_s": 111.9,
+ "fps_overall": 10.14,
+ "events": [
+  {
+   "t_s": 39.27,
+   "kind": "off",
+   "before": 113.66,
+   "first_after": 4.15,
+   "peak_or_min_in_first_1s": 3.55,
+   "settled": 6.75,
+   "at": {
+    "+0s": 4.15,
+    "+0.25s": 4.37,
+    "+0.5s": 5.01,
+    "+1s": 5.81,
+    "+2s": 6.75,
+    "+3s": 7.13,
+    "+5s": 6.88,
+    "+8s": 7.15
+   },
+   "max_saturated_frac_first_1s": 0.0,
+   "fps_in_phase": 12.4,
+   "phase_len_s": 31.5
+  },
+  {
+   "t_s": 70.72,
+   "kind": "on",
+   "before": 6.76,
+   "first_after": 22.42,
+   "peak_or_min_in_first_1s": 146.77,
+   "settled": 119.11,
+   "at": {
+    "+0s": 22.42,
+    "+0.25s": 44.93,
+    "+0.5s": 52.32,
+    "+1s": 146.38,
+    "+2s": 140.16,
+    "+3s": 137.36,
+    "+5s": 132.76,
+    "+8s": 127.27
+   },
+   "max_saturated_frac_first_1s": 0.0,
+   "fps_in_phase": 12.4,
+   "phase_len_s": 19.5
+  },
+  {
+   "t_s": 90.24,
+   "kind": "off",
+   "before": 118.5,
+   "first_after": 7.78,
+   "peak_or_min_in_first_1s": 3.66,
+   "settled": 6.87,
+   "at": {
+    "+0s": 7.78,
+    "+0.25s": 4.48,
+    "+0.5s": 5.09,
+    "+1s": 5.68,
+    "+2s": 6.72,
+    "+3s": 7.0
+   },
+   "max_saturated_frac_first_1s": 0.0,
+   "fps_in_phase": 12.4,
+   "phase_len_s": 4.8
+  },
+  {
+   "t_s": 95.08,
+   "kind": "on",
+   "before": 6.88,
+   "first_after": 36.01,
+   "peak_or_min_in_first_1s": 144.41,
+   "settled": 115.47,
+   "at": {
+    "+0s": 36.01,
+    "+0.25s": 42.04,
+    "+0.5s": 143.3,
+    "+1s": 142.89,
+    "+2s": 139.9,
+    "+3s": 137.04,
+    "+5s": 132.56,
+    "+8s": 126.36
+   },
+   "max_saturated_frac_first_1s": 0.0,
+   "fps_in_phase": 12.4,
+   "phase_len_s": 16.9
+  }
+ ]
+}

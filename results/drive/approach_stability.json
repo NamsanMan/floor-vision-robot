@@ -1,0 +1,48 @@
+{
+ "true_x_m": 1.6,
+ "odom_scale": 0.85,
+ "runs": [
+  {
+   "run": "03",
+   "cond": "cam",
+   "frames_should_see": 73,
+   "missed": 10,
+   "est_median_m": 1.57,
+   "bias_cm": -3.0,
+   "std_cm": 11.8,
+   "std_near_cm": 1.7,
+   "jitter_p50_cm": 0.8,
+   "jitter_p95_cm": 26.4
+  },
+  {
+   "run": "04",
+   "cond": "cam",
+   "frames_should_see": 71,
+   "missed": 8,
+   "est_median_m": 1.593,
+   "bias_cm": -0.7,
+   "std_cm": 8.0,
+   "std_near_cm": 2.3,
+   "jitter_p50_cm": 0.8,
+   "jitter_p95_cm": 12.6
+  },
+  {
+   "run": "05",
+   "cond": "lidar",
+   "frames_should_see": 55,
+   "missed": 5,
+   "est_median_m": 1.62,
+   "bias_cm": 2.0,
+   "std_cm": 6.0,
+   "std_near_cm": 1.9,
+   "jitter_p50_cm": 1.1,
+   "jitter_p95_cm": 9.9
+  },
+  {
+   "run": "02",
+   "cond": "cam",
+   "empty_frames": 74,
+   "false_detections": 0
+  }
+ ]
+}

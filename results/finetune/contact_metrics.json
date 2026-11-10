@@ -1,0 +1,120 @@
+{
+ "360x480": {
+  "fine-tuned (s0)": {
+   "contact_recall@50": 0.9608,
+   "contact_notfloor_frac_mean": 0.8349,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "25/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "4/5",
+    "shoe": "4/5"
+   },
+   "freespace_abs_err_cm_median": 1.2,
+   "freespace_abs_err_cm_p90": 13.2,
+   "danger_cols_over10cm": 0.0427,
+   "n_cols": 17010
+  },
+  "fine-tuned seeds": {
+   "contact_recall@50": [
+    0.9608,
+    0.902,
+    0.9216
+   ],
+   "freespace_abs_err_cm_median": [
+    1.2,
+    1.2,
+    1.2
+   ],
+   "danger_cols_over10cm": [
+    0.0427,
+    0.053,
+    0.0488
+   ]
+  },
+  "zero-shot road+sidewalk": {
+   "contact_recall@50": 0.6471,
+   "contact_notfloor_frac_mean": 0.6004,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "12/25",
+    "cable": "8/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "4/5"
+   },
+   "freespace_abs_err_cm_median": 10.1,
+   "freespace_abs_err_cm_p90": 130.6,
+   "danger_cols_over10cm": 0.0788,
+   "n_cols": 17010
+  }
+ },
+ "240x320": {
+  "fine-tuned (s0)": {
+   "contact_recall@50": 0.9608,
+   "contact_notfloor_frac_mean": 0.9019,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "23/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "5/5"
+   },
+   "freespace_abs_err_cm_median": 1.9,
+   "freespace_abs_err_cm_p90": 15.3,
+   "danger_cols_over10cm": 0.0325,
+   "n_cols": 17010
+  },
+  "fine-tuned seeds": {
+   "contact_recall@50": [
+    0.9608,
+    0.9412,
+    0.9412
+   ],
+   "freespace_abs_err_cm_median": [
+    1.9,
+    2.1,
+    2.5
+   ],
+   "danger_cols_over10cm": [
+    0.0325,
+    0.0448,
+    0.0275
+   ]
+  },
+  "zero-shot road+sidewalk": {
+   "contact_recall@50": 0.7059,
+   "contact_notfloor_frac_mean": 0.7047,
+   "n_objects": 51,
+   "contact_recall_by_type": {
+    "box": "15/25",
+    "cable": "12/12",
+    "leg": "4/4",
+    "other": "5/5",
+    "shoe": "0/5"
+   },
+   "freespace_abs_err_cm_median": 7.2,
+   "freespace_abs_err_cm_p90": 95.2,
+   "danger_cols_over10cm": 0.0925,
+   "n_cols": 17010
+  }
+ },
+ "EoMT-L draft (reference)": {
+  "contact_recall@50": 0.7255,
+  "contact_notfloor_frac_mean": 0.6546,
+  "n_objects": 51,
+  "contact_recall_by_type": {
+   "box": "25/25",
+   "cable": "5/12",
+   "leg": "4/4",
+   "other": "2/5",
+   "shoe": "1/5"
+  },
+  "freespace_abs_err_cm_median": 0.0,
+  "freespace_abs_err_cm_p90": 5.2,
+  "danger_cols_over10cm": 0.0617,
+  "n_cols": 17010
+ }
+}

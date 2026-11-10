@@ -1,0 +1,48 @@
+{
+ "on": {
+  "run": "02_idle_cam_none_light_on",
+  "frames": 54,
+  "brightness_mean": 115.2,
+  "brightness_floor_region": 154.4,
+  "front_det_rate": 1.0,
+  "front_med_m": 1.092,
+  "front_std_cm": 0.9,
+  "floor_ratio_in_range": 0.993,
+  "col_dist_med_m": 1.561,
+  "cols_blocked_at_blind_edge": 0.0,
+  "offline_vs_robot_row_diff_med_px": 0.0,
+  "floor_iou_vs_on": 1.0
+ },
+ "off": {
+  "run": "01_idle_cam_none_light_off",
+  "frames": 54,
+  "brightness_mean": 1.9,
+  "brightness_floor_region": 1.7,
+  "front_det_rate": 1.0,
+  "front_med_m": 0.287,
+  "front_std_cm": 0.0,
+  "floor_ratio_in_range": 0.066,
+  "col_dist_med_m": 0.287,
+  "cols_blocked_at_blind_edge": 0.825,
+  "offline_vs_robot_row_diff_med_px": 0.0,
+  "floor_iou_vs_on": 0.056
+ },
+ "off_brightened": {
+  "gain": 15.0,
+  "floor_ratio_in_range": 0.773,
+  "floor_iou_vs_on": 0.769,
+  "front_det_rate": 1.0,
+  "front_med_m": 0.287,
+  "front_p10_p90_m": [
+   0.287,
+   0.287
+  ],
+  "cols_blocked_at_blind_edge": 0.119,
+  "note": "참고용: 저장된 JPEG(밝기 2/255 근처)를 소프트웨어로 밝혀 같은 모델에 넣은 결과. 로봇에서 돈 값 아님"
+ },
+ "geometry": {
+  "max_range_row": 249.1,
+  "nearest_visible_floor_x": 0.287,
+  "max_range_x": 1.561
+ }
+}

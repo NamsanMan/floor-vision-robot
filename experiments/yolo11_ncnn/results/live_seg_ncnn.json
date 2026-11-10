@@ -1,0 +1,13 @@
+{
+  "label": "seg_ncnn",
+  "duration_s": 30.0,
+  "messages": 183,
+  "hz": 6.65,
+  "period_ms_mean": 150.4,
+  "period_ms_p95": 387.0,
+  "capture_to_detection_ms_mean": 194.8,
+  "capture_to_detection_ms_p95": 418.3,
+  "frames_with_detection_pct": 0.0,
+  "detections_by_class": {},
+  "best_score": {}
+}

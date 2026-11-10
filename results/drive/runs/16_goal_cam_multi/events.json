@@ -1,0 +1,121 @@
+{
+ "args": {
+  "cmd": "goal",
+  "cond": "cam",
+  "backend": "remote",
+  "obj": "multi",
+  "size": null,
+  "note": "끊김 시험: 주행 중 메인컴 추론 프로그램 종료",
+  "no_frames": true,
+  "session": "20261031",
+  "odom_scale": 0.85,
+  "at": 1.2,
+  "dist": 2.5,
+  "timeout": 35.0,
+  "no_reset": false,
+  "to_click": false
+ },
+ "t0_epoch": 1793430064.371983,
+ "result": "시간 초과",
+ "extra": {
+  "travel_m": 0.721,
+  "reason": "시간 초과",
+  "status": null,
+  "goal_left_m": 1.798,
+  "max_lateral_m": 0.276,
+  "recoveries": 1,
+  "goal_map": [
+   2.357,
+   0.391
+  ],
+  "first_det_m": 1.018,
+  "fps": 0.06,
+  "lag_p50_ms": 45.8,
+  "lag_p95_ms": 50.1,
+  "lag_p99_ms": 50.5,
+  "lag_max_ms": 50.6,
+  "inf_p50_ms": 27.1,
+  "server_p50_ms": 13.1,
+  "up_kb": 14.5,
+  "remote_fail": 0,
+  "cpu_pct": 40.9,
+  "node_cores": 0.11
+ },
+ "cm_log": [
+  [
+   4.0,
+   "stop",
+   "Robot to stop due to PolygonStop polygon\u001b[0m"
+  ]
+ ],
+ "problems": {
+  "LiDAR 드롭": 0,
+  "카메라 점 드롭": 0,
+  "카메라 층 갱신 안 됨": 155,
+  "주기 못 맞춤": 0,
+  "TF 오류": 0,
+  "CM 소스 무시": 44,
+  "진행 실패": 0
+ },
+ "watchdog_trips_s": [
+  3.91
+ ],
+ "front_distance": [
+  [
+   0.157,
+   1.128
+  ],
+  [
+   0.388,
+   1.092
+  ],
+  [
+   0.626,
+   1.146
+  ],
+  [
+   0.866,
+   9.9
+  ],
+  [
+   1.11,
+   9.9
+  ],
+  [
+   1.348,
+   9.9
+  ],
+  [
+   1.588,
+   9.9
+  ],
+  [
+   1.836,
+   9.9
+  ],
+  [
+   2.074,
+   9.9
+  ],
+  [
+   2.321,
+   9.9
+  ],
+  [
+   2.564,
+   9.9
+  ],
+  [
+   2.799,
+   9.9
+  ],
+  [
+   3.037,
+   9.9
+  ],
+  [
+   3.282,
+   9.9
+  ]
+ ]
+}

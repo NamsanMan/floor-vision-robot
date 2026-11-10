@@ -1,0 +1,20 @@
+{
+  "variant": "ncnn_fp32",
+  "subset": "full",
+  "images": 5000,
+  "mAP50-95": 0.39116,
+  "mAP50": 0.54707,
+  "precision": 0.65036,
+  "recall": 0.49762,
+  "speed_ms": {
+    "preprocess": 3.23,
+    "inference": 238.23,
+    "loss": 0.0,
+    "postprocess": 4.78
+  },
+  "wall_min": 21.3,
+  "fp16_off_check": {
+    "use_fp16_storage": false,
+    "use_fp16_arithmetic": false
+  }
+}

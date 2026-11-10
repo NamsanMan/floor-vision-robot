@@ -1,0 +1,29 @@
+Pi 5, ORT 1.23.2 CPU, 2 threads, ROS running, 25 runs (first 5 dropped), 2026-10-07. Script: scripts/ort_profile.py
+
+A_360x480_fp32.onnx  node time per run 360.7 ms
+  DECODER 50%  ENCODER 41%  OTHER 9%
+    34.2%   123.5 ms  dec fuse (1024->256 @1/4)
+    10.9%    39.3 ms  dec other (concat etc.)
+     9.1%    32.7 ms  final upsample / other
+     9.0%    32.3 ms  enc stage1 mix-ffn
+     6.3%    22.6 ms  enc stage1 attention
+     4.9%    17.7 ms  enc stage2 mix-ffn
+     4.3%    15.5 ms  enc stage3 mix-ffn
+     3.6%    12.9 ms  enc stage2 attention
+     3.1%    11.3 ms  enc stage3 attention
+     3.1%    11.1 ms  dec per-stage MLP + upsample
+  top ops: FusedConv 34%, Gemm 15%, Transpose 14%, Conv 10%, Gelu 6%, Resize 5%, Concat 3%, FusedMatMul 3%
+
+A_240x320_int8_percentile.onnx  node time per run 105.5 ms
+  ENCODER 60%  DECODER 29%  OTHER 11%
+    20.7%    21.8 ms  enc stage1 mix-ffn
+    14.8%    15.6 ms  dec other (concat etc.)
+    11.1%    11.8 ms  final upsample / other
+    10.1%    10.7 ms  dec fuse (1024->256 @1/4)
+    10.1%    10.6 ms  enc stage2 mix-ffn
+     6.8%     7.2 ms  enc stage3 mix-ffn
+     6.4%     6.7 ms  enc stage1 attention
+     3.8%     4.0 ms  dec per-stage MLP + upsample
+     3.6%     3.8 ms  enc stage2 attention
+     3.2%     3.4 ms  enc stage4 mix-ffn
+  top ops: Erf 15%, QGemm 14%, QLinearConv 13%, Transpose 10%, Resize 7%, QuantizeLinear 7%, DequantizeLinear 6%, Mul 5%

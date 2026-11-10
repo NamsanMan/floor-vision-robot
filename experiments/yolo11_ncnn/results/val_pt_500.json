@@ -1,0 +1,16 @@
+{
+  "variant": "pt",
+  "subset": "500",
+  "images": 500,
+  "mAP50-95": 0.42699,
+  "mAP50": 0.58094,
+  "precision": 0.65112,
+  "recall": 0.53408,
+  "speed_ms": {
+    "preprocess": 2.22,
+    "inference": 611.29,
+    "loss": 0.0,
+    "postprocess": 3.68
+  },
+  "wall_min": 5.2
+}

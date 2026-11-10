@@ -1,0 +1,40 @@
+{
+ "masks": "~/mentorpi/data/ft150_user/snap_20261029_1419/masks",
+ "labeled_per_group": {
+  "A": 59,
+  "B": 31,
+  "C": 30,
+  "D": 30
+ },
+ "fold_groups": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "left_out_partial_groups": {},
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "extra_args": [],
+ "tag": "",
+ "runs": [
+  "cv_holdA_trainBCD_s0",
+  "cv_holdA_trainBCD_s1",
+  "cv_holdA_trainBCD_s2",
+  "cv_holdB_trainACD_s0",
+  "cv_holdB_trainACD_s1",
+  "cv_holdB_trainACD_s2",
+  "cv_holdC_trainABD_s0",
+  "cv_holdC_trainABD_s1",
+  "cv_holdC_trainABD_s2",
+  "cv_holdD_trainABC_s0",
+  "cv_holdD_trainABC_s1",
+  "cv_holdD_trainABC_s2",
+  "main_trainABC_s0",
+  "main_trainABC_s1",
+  "main_trainABC_s2"
+ ]
+}

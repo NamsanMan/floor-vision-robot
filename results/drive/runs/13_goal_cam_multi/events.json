@@ -1,0 +1,72 @@
+{
+ "args": {
+  "cmd": "goal",
+  "cond": "cam",
+  "backend": "local",
+  "obj": "multi",
+  "size": null,
+  "note": "sensor_frame 검증: odom 원점에서 약 3.2m 떨어진 채 출발(11회차와 같은 조건)",
+  "no_frames": true,
+  "session": "20261031",
+  "odom_scale": 0.85,
+  "at": 1.2,
+  "dist": 2.5,
+  "timeout": 90.0,
+  "no_reset": false,
+  "to_click": true
+ },
+ "t0_epoch": 1793429613.823006,
+ "result": "도착",
+ "extra": {
+  "travel_m": 0.1,
+  "reason": "도착",
+  "status": 4,
+  "goal_left_m": 0.146,
+  "max_lateral_m": 0.074,
+  "recoveries": 1,
+  "goal_map": [
+   2.905,
+   0.625
+  ],
+  "first_det_m": 0.982,
+  "cpu_pct": 67.2,
+  "node_cores": 1.02
+ },
+ "cm_log": [],
+ "problems": {
+  "LiDAR 드롭": 0,
+  "카메라 점 드롭": 0,
+  "카메라 층 갱신 안 됨": 0,
+  "주기 못 맞춤": 1,
+  "TF 오류": 0,
+  "CM 소스 무시": 0,
+  "진행 실패": 0
+ },
+ "watchdog_trips_s": [],
+ "front_distance": [
+  [
+   0.095,
+   1.092
+  ],
+  [
+   0.332,
+   1.11
+  ],
+  [
+   0.573,
+   1.11
+  ],
+  [
+   0.805,
+   1.497
+  ],
+  [
+   1.052,
+   1.434
+  ],
+  [
+   1.3,
+   1.25
+  ]
+ ]
+}

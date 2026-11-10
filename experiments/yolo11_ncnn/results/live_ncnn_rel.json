@@ -1,0 +1,17 @@
+{
+  "label": "ncnn_rel",
+  "duration_s": 30.0,
+  "messages": 248,
+  "hz": 8.26,
+  "period_ms_mean": 121.1,
+  "period_ms_p95": 315.2,
+  "capture_to_detection_ms_mean": 164.8,
+  "capture_to_detection_ms_p95": 354.4,
+  "frames_with_detection_pct": 99.2,
+  "detections_by_class": {
+    "chair": 246
+  },
+  "best_score": {
+    "chair": 0.763
+  }
+}

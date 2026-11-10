@@ -1,0 +1,24 @@
+{
+ "query": "종이컵",
+ "target": "paper cup",
+ "proposal": 3,
+ "prob": 0.312,
+ "object_base": [
+  1.119,
+  -0.106
+ ],
+ "xy": [
+  0.64,
+  0.182
+ ],
+ "frame": "map",
+ "object_map": [
+  0.99,
+  0.175
+ ],
+ "robot_map": [
+  -0.133,
+  0.198,
+  0.075
+ ]
+}

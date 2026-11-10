@@ -1,0 +1,303 @@
+{
+  "env": {
+    "ultralytics": "8.3.168",
+    "torch": "2.3.1",
+    "ncnn": "1.0.20260526",
+    "numpy": "1.24.3",
+    "load_avg_start": [
+      0.90478515625,
+      0.98486328125,
+      0.99609375
+    ],
+    "temp_start_c": 50.7,
+    "protocol": "20 warm-up + 50 timed, batch 1, ROS bringup running, robot idle",
+    "load_avg_end": [
+      4.6005859375,
+      3.23583984375,
+      1.95654296875
+    ],
+    "temp_end_c": 62.25
+  },
+  "consistency": {
+    "robot_corridor": {
+      "n_pytorch": 0,
+      "n_ncnn": 0,
+      "matched": 0,
+      "mean_iou": null,
+      "min_iou": null,
+      "max_conf_diff": null,
+      "pytorch": [],
+      "ncnn": []
+    },
+    "robot_box": {
+      "n_pytorch": 0,
+      "n_ncnn": 0,
+      "matched": 0,
+      "mean_iou": null,
+      "min_iou": null,
+      "max_conf_diff": null,
+      "pytorch": [],
+      "ncnn": []
+    },
+    "bus": {
+      "n_pytorch": 4,
+      "n_ncnn": 4,
+      "matched": 4,
+      "mean_iou": 0.9913,
+      "min_iou": 0.9792,
+      "max_conf_diff": 0.0076,
+      "pytorch": [
+        "bus 0.87",
+        "person 0.80",
+        "person 0.83",
+        "person 0.87"
+      ],
+      "ncnn": [
+        "bus 0.87",
+        "person 0.80",
+        "person 0.84",
+        "person 0.87"
+      ]
+    },
+    "zidane": {
+      "n_pytorch": 3,
+      "n_ncnn": 3,
+      "matched": 3,
+      "mean_iou": 0.9902,
+      "min_iou": 0.9767,
+      "max_conf_diff": 0.0071,
+      "pytorch": [
+        "person 0.66",
+        "person 0.88",
+        "tie 0.47"
+      ],
+      "ncnn": [
+        "person 0.67",
+        "person 0.88",
+        "tie 0.48"
+      ]
+    }
+  },
+  "numeric": {
+    "480x640": {
+      "output_shape": [
+        84,
+        6300
+      ],
+      "ncnn_vs_pytorch_max_abs_diff": 13.998779296875,
+      "ort": {
+        "ort_vs_pytorch_max_abs_diff": 0.003631591796875,
+        "shape": [
+          1,
+          84,
+          6300
+        ]
+      }
+    },
+    "640x640": {
+      "output_shape": [
+        84,
+        8400
+      ],
+      "ncnn_vs_pytorch_max_abs_diff": 20.741561889648438,
+      "ort": {
+        "ort_vs_pytorch_max_abs_diff": 0.00177001953125,
+        "shape": [
+          1,
+          84,
+          8400
+        ]
+      }
+    }
+  },
+  "model_only": [
+    {
+      "backend": "PyTorch",
+      "size": "480x640",
+      "threads": 4,
+      "mean_ms": 425.01,
+      "median_ms": 347.69,
+      "p95_ms": 856.44,
+      "min_ms": 339.39,
+      "max_ms": 951.28,
+      "std_ms": 164.15,
+      "fps_mean": 2.35,
+      "temp_c": 57.85
+    },
+    {
+      "backend": "NCNN",
+      "size": "480x640",
+      "threads": 4,
+      "mean_ms": 76.74,
+      "median_ms": 64.17,
+      "p95_ms": 128.46,
+      "min_ms": 60.34,
+      "max_ms": 276.42,
+      "std_ms": 39.48,
+      "fps_mean": 13.03,
+      "temp_c": 59.5
+    },
+    {
+      "backend": "ONNX Runtime",
+      "size": "480x640",
+      "threads": 4,
+      "mean_ms": 159.63,
+      "median_ms": 133.71,
+      "p95_ms": 243.5,
+      "min_ms": 126.88,
+      "max_ms": 287.81,
+      "std_ms": 42.52,
+      "fps_mean": 6.26,
+      "temp_c": 61.7
+    },
+    {
+      "backend": "PyTorch",
+      "size": "480x640",
+      "threads": 2,
+      "mean_ms": 417.75,
+      "median_ms": 371.15,
+      "p95_ms": 555.9,
+      "min_ms": 359.8,
+      "max_ms": 612.73,
+      "std_ms": 75.72,
+      "fps_mean": 2.39,
+      "temp_c": 57.3
+    },
+    {
+      "backend": "NCNN",
+      "size": "480x640",
+      "threads": 2,
+      "mean_ms": 65.44,
+      "median_ms": 64.5,
+      "p95_ms": 72.27,
+      "min_ms": 63.63,
+      "max_ms": 80.59,
+      "std_ms": 3.1,
+      "fps_mean": 15.28,
+      "temp_c": 60.05
+    },
+    {
+      "backend": "ONNX Runtime",
+      "size": "480x640",
+      "threads": 2,
+      "mean_ms": 160.0,
+      "median_ms": 154.29,
+      "p95_ms": 179.53,
+      "min_ms": 152.38,
+      "max_ms": 196.08,
+      "std_ms": 10.34,
+      "fps_mean": 6.25,
+      "temp_c": 59.5
+    },
+    {
+      "backend": "PyTorch",
+      "size": "640x640",
+      "threads": 4,
+      "mean_ms": 530.2,
+      "median_ms": 455.09,
+      "p95_ms": 865.34,
+      "min_ms": 439.45,
+      "max_ms": 1000.05,
+      "std_ms": 149.23,
+      "fps_mean": 1.89,
+      "temp_c": 60.05
+    },
+    {
+      "backend": "NCNN",
+      "size": "640x640",
+      "threads": 4,
+      "mean_ms": 118.31,
+      "median_ms": 90.83,
+      "p95_ms": 271.6,
+      "min_ms": 84.8,
+      "max_ms": 314.5,
+      "std_ms": 64.77,
+      "fps_mean": 8.45,
+      "temp_c": 60.05
+    },
+    {
+      "backend": "ONNX Runtime",
+      "size": "640x640",
+      "threads": 4,
+      "mean_ms": 221.54,
+      "median_ms": 186.6,
+      "p95_ms": 321.36,
+      "min_ms": 177.02,
+      "max_ms": 384.83,
+      "std_ms": 52.79,
+      "fps_mean": 4.51,
+      "temp_c": 62.8
+    },
+    {
+      "backend": "PyTorch",
+      "size": "640x640",
+      "threads": 2,
+      "mean_ms": 551.46,
+      "median_ms": 495.53,
+      "p95_ms": 723.51,
+      "min_ms": 481.69,
+      "max_ms": 761.88,
+      "std_ms": 92.47,
+      "fps_mean": 1.81,
+      "temp_c": 59.5
+    },
+    {
+      "backend": "NCNN",
+      "size": "640x640",
+      "threads": 2,
+      "mean_ms": 93.7,
+      "median_ms": 88.48,
+      "p95_ms": 108.5,
+      "min_ms": 86.46,
+      "max_ms": 125.36,
+      "std_ms": 9.13,
+      "fps_mean": 10.67,
+      "temp_c": 60.6
+    },
+    {
+      "backend": "ONNX Runtime",
+      "size": "640x640",
+      "threads": 2,
+      "mean_ms": 214.69,
+      "median_ms": 205.03,
+      "p95_ms": 248.05,
+      "min_ms": 201.99,
+      "max_ms": 257.91,
+      "std_ms": 15.24,
+      "fps_mean": 4.66,
+      "temp_c": 60.6
+    }
+  ],
+  "e2e": {
+    "PyTorch": {
+      "mean_ms": 428.48,
+      "median_ms": 352.31,
+      "p95_ms": 822.2,
+      "min_ms": 342.61,
+      "max_ms": 948.28,
+      "std_ms": 154.57,
+      "fps_mean": 2.33,
+      "stages_ms": {
+        "preprocess": 2.87,
+        "inference": 423.55,
+        "postprocess": 1.68
+      },
+      "temp_c": 59.5
+    },
+    "NCNN": {
+      "mean_ms": 70.33,
+      "median_ms": 68.85,
+      "p95_ms": 77.15,
+      "min_ms": 65.78,
+      "max_ms": 80.24,
+      "std_ms": 3.69,
+      "fps_mean": 14.22,
+      "stages_ms": {
+        "preprocess": 2.7,
+        "inference": 65.74,
+        "postprocess": 1.56
+      },
+      "temp_c": 62.25
+    }
+  }
+}

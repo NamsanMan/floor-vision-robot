@@ -1,0 +1,14 @@
+{
+  "bus": {
+    "n_pytorch": 5,
+    "n_ncnn": 5,
+    "mask_iou_mean": 0.9967,
+    "mask_iou_min": 0.9961
+  },
+  "zidane": {
+    "n_pytorch": 4,
+    "n_ncnn": 4,
+    "mask_iou_mean": 0.994,
+    "mask_iou_min": 0.9869
+  }
+}

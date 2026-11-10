@@ -1,0 +1,79 @@
+{
+  "ncnn": "1.0.20260526",
+  "default_opts": {
+    "use_bf16_packed": false,
+    "use_bf16_storage": false,
+    "use_fp16_arithmetic": true,
+    "use_fp16_packed": true,
+    "use_fp16_storage": true,
+    "use_int8_arithmetic": false,
+    "use_int8_inference": true,
+    "use_int8_packed": true,
+    "use_int8_storage": true,
+    "use_packing_layout": true,
+    "use_sgemm_convolution": true,
+    "use_subgroup_ops": true,
+    "use_tensor_storage": false,
+    "use_vulkan_compute": false,
+    "use_winograd23_convolution": true,
+    "use_winograd43_convolution": true,
+    "use_winograd63_convolution": true,
+    "use_winograd_convolution": true
+  },
+  "numeric_bus": {
+    "NCNN default": {
+      "score_max_abs": 0.14724,
+      "box_max_abs_px_all_anchors": 24.524,
+      "box_max_abs_px_conf025_anchors": 0.695,
+      "n_conf025_anchors": 38
+    },
+    "NCNN FP32 (fp16 off)": {
+      "score_max_abs": 5e-05,
+      "box_max_abs_px_all_anchors": 0.007,
+      "box_max_abs_px_conf025_anchors": 0.0,
+      "n_conf025_anchors": 38
+    },
+    "ONNX Runtime (FP32)": {
+      "ort_vs_pytorch_max_abs_diff": 0.003265380859375,
+      "shape": [
+        1,
+        84,
+        6300
+      ]
+    }
+  },
+  "latency_480x640": [
+    {
+      "variant": "NCNN default",
+      "threads": 4,
+      "mean_ms": 70.73,
+      "median_ms": 63.33,
+      "p95_ms": 75.59,
+      "fps_mean": 14.14
+    },
+    {
+      "variant": "NCNN default",
+      "threads": 2,
+      "mean_ms": 71.37,
+      "median_ms": 71.1,
+      "p95_ms": 80.08,
+      "fps_mean": 14.01
+    },
+    {
+      "variant": "NCNN FP32 (fp16 off)",
+      "threads": 4,
+      "mean_ms": 168.77,
+      "median_ms": 139.74,
+      "p95_ms": 351.98,
+      "fps_mean": 5.93
+    },
+    {
+      "variant": "NCNN FP32 (fp16 off)",
+      "threads": 2,
+      "mean_ms": 141.21,
+      "median_ms": 136.43,
+      "p95_ms": 158.4,
+      "fps_mean": 7.08
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+Graph-level optimizations (scripts/opt_graph.py), Pi 5, ORT 1.23.2 CPU, 2 threads, ROS running, 2026-10-07.
+noup = final Resize (1/4 -> input res) removed; gelu = Div-Erf-Add-Mul-Mul fused into com.microsoft.Gelu
+(ORT fuses GELU itself in the FP32 graph but not in the QDQ INT8 graph).
+
+model                                   mean ms  p95 ms   FPS
+A_240x320_fp32                           147.8   172.6   6.76
+A_240x320_fp32_noup_gelu                 144.1   164.0   6.94
+A_240x320_int8_percentile                108.2   122.5   9.25
+A_240x320_int8_percentile_noup           106.3   118.6   9.41
+A_240x320_int8_percentile_gelu            88.9    99.9  11.24
+A_240x320_int8_percentile_noup_gelu       85.6   101.1  11.69
+A_360x480_int8_percentile                272.6   315.2   3.67
+A_360x480_int8_percentile_noup_gelu      229.0   266.0   4.37
+
+Accuracy (CamVid test, fold A, scripts/eval_noup.py):
+  int8 240x320 baseline                        mIoU 0.6307
+  int8 240x320 noup_gelu, logits->label bilinear 0.6311
+  int8 240x320 noup_gelu, argmax at 60x80 -> nearest 0.6264
+
+Profile note: the earlier 'final upsample / other' bucket (11%) was mostly Transpose 5.8% + misc;
+the final Resize itself was 1.3%. After fusion: QGemm 17%, QLinearConv 15%, Transpose 13%, Gelu 11%,
+QuantizeLinear 9%, Resize 7% (decoder), DequantizeLinear 6%, Concat 6%.

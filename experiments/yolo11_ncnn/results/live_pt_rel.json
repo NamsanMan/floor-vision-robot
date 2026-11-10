@@ -1,0 +1,17 @@
+{
+  "label": "pt_rel",
+  "duration_s": 30.0,
+  "messages": 64,
+  "hz": 2.17,
+  "period_ms_mean": 461.1,
+  "period_ms_p95": 612.6,
+  "capture_to_detection_ms_mean": 509.2,
+  "capture_to_detection_ms_p95": 673.7,
+  "frames_with_detection_pct": 100.0,
+  "detections_by_class": {
+    "chair": 67
+  },
+  "best_score": {
+    "chair": 0.747
+  }
+}

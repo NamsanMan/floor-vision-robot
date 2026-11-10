@@ -1,0 +1,1405 @@
+{
+ "run": "cv_holdA_trainBCD_s0",
+ "train_groups": "BCD",
+ "eval_groups": "A",
+ "seed": 0,
+ "n_train": 91,
+ "iters": 660,
+ "iters_per_epoch": 11,
+ "train_time_s": 60.43060803413391,
+ "final_train_loss": 0.011959232813255354,
+ "train_frames": [
+  "001_spot2_033",
+  "002_spot3_068",
+  "004_spot2_079",
+  "005_spot3_018",
+  "010_spot2_008",
+  "011_spot3_041",
+  "013_spot2_054",
+  "014_spot3_092",
+  "016_spot2_020",
+  "017_spot3_005",
+  "021_spot2_067",
+  "022_spot3_055",
+  "025_spot2_092",
+  "026_spot3_028",
+  "028_spot2_042",
+  "029_spot3_078",
+  "033_spot2_002",
+  "034_spot3_012",
+  "036_spot2_014",
+  "038_spot3_035",
+  "040_spot2_026",
+  "041_spot3_048",
+  "045_spot2_048",
+  "046_spot3_061",
+  "048_spot2_061",
+  "049_spot3_085",
+  "051_spot2_073",
+  "053_spot3_098",
+  "057_spot2_086",
+  "058_spot3_002",
+  "060_spot2_005",
+  "061_spot3_008",
+  "063_spot2_011",
+  "064_spot3_015",
+  "069_spot2_017",
+  "070_spot3_022",
+  "072_spot2_023",
+  "073_spot3_025",
+  "075_spot2_029",
+  "076_spot3_032",
+  "080_spot2_036",
+  "081_spot3_038",
+  "084_spot2_039",
+  "085_spot3_045",
+  "087_spot2_045",
+  "088_spot3_051",
+  "092_spot2_051",
+  "093_spot3_058",
+  "095_spot2_058",
+  "097_spot3_065",
+  "099_spot2_063",
+  "100_spot3_071",
+  "104_spot2_070",
+  "105_spot3_075",
+  "107_spot2_076",
+  "108_spot3_082",
+  "110_spot2_082",
+  "112_spot3_088",
+  "116_spot2_089",
+  "117_spot3_095",
+  "119_spot2_095",
+  "spot4_009",
+  "spot4_013",
+  "spot4_016",
+  "spot4_020",
+  "spot4_023",
+  "spot4_027",
+  "spot4_030",
+  "spot4_033",
+  "spot4_037",
+  "spot4_040",
+  "spot4_043",
+  "spot4_047",
+  "spot4_050",
+  "spot4_053",
+  "spot4_057",
+  "spot4_060",
+  "spot4_064",
+  "spot4_067",
+  "spot4_071",
+  "spot4_074",
+  "spot4_077",
+  "spot4_081",
+  "spot4_084",
+  "spot4_087",
+  "spot4_091",
+  "spot4_094",
+  "spot4_098",
+  "spot4_101",
+  "spot4_105",
+  "spot4_108"
+ ],
+ "eval_frames": [
+  "000_spot1_001",
+  "003_spot1_049",
+  "006_straight1_102",
+  "007_straightB_090",
+  "008_straight2_rf2o_100",
+  "009_spot1_074",
+  "012_spot1_023",
+  "015_spot1_036",
+  "018_straight1_016",
+  "019_straightB_044",
+  "020_spot1_061",
+  "023_straight2_rf2o_046",
+  "024_spot1_088",
+  "027_spot1_011",
+  "030_straight1_095",
+  "031_straightB_074",
+  "032_spot1_017",
+  "035_spot1_030",
+  "037_straight2_rf2o_068",
+  "039_spot1_043",
+  "042_straight1_070",
+  "043_straightB_030",
+  "044_spot1_055",
+  "047_spot1_068",
+  "050_spot1_081",
+  "052_straight2_rf2o_028",
+  "054_straight1_091",
+  "055_straightB_081",
+  "056_spot1_094",
+  "059_spot1_004",
+  "062_spot1_007",
+  "065_straight1_034",
+  "066_straightB_051",
+  "067_straight2_rf2o_082",
+  "068_spot1_014",
+  "071_spot1_020",
+  "074_spot1_026",
+  "077_straight1_078",
+  "078_straightB_039",
+  "079_spot1_033",
+  "082_straight2_rf2o_076",
+  "083_spot1_039",
+  "086_spot1_046",
+  "089_straight1_058",
+  "090_straightB_019",
+  "091_spot1_052",
+  "094_spot1_058",
+  "096_straight2_rf2o_055",
+  "098_spot1_064",
+  "101_straight1_028",
+  "102_straightB_086",
+  "103_spot1_071",
+  "106_spot1_077",
+  "109_spot1_084",
+  "111_straight2_rf2o_041",
+  "113_straight1_083",
+  "114_straightB_063",
+  "115_spot1_091",
+  "118_spot1_097"
+ ],
+ "init": {
+  "ckpt": "~/mentorpi/weights/dsnet/dsnet_camvid_Aset_best_model.pth",
+  "ckpt_epoch": 300,
+  "ckpt_best_test_mIoU": 0.7037125781088174,
+  "n_params": 3717228
+ },
+ "args": {
+  "masks": "~/mentorpi/data/ft150_user/snap_20261029_1419/masks",
+  "out": "~/mentorpi/finetune/runs/snap_20261029_1419/cv_holdA_trainBCD_s0",
+  "train_groups": "BCD",
+  "eval_groups": "A",
+  "predict_split": "",
+  "n_train": 0,
+  "epochs": 60,
+  "bs": 8,
+  "lr_enc": 6e-05,
+  "lr_head": 0.0006,
+  "wd": 0.01,
+  "hw": "360x480",
+  "eval_hw": "360x480,240x320",
+  "scale": "0.75,1.25",
+  "jitter": 0.3,
+  "seed": 0,
+  "workers": 3,
+  "no_amp": false,
+  "save_prob": false,
+  "ckpt": "~/mentorpi/weights/dsnet/dsnet_camvid_Aset_best_model.pth"
+ },
+ "eval": {
+  "360x480": {
+   "A": {
+    "summary": {
+     "floor_iou": 0.9185476369236638,
+     "notfloor_iou": 0.9505177958392206,
+     "miou": 0.9345327163814422,
+     "pixel_acc": 0.9682402564442091,
+     "false_obstacle_rate_on_floor": 0.022248118690371726,
+     "false_floor_rate_on_notfloor": 0.03725797180490046,
+     "valid_px": 18124800,
+     "n_frames": 59,
+     "confusion_[[TN,FP],[FN,TP]]": [
+      [
+       11057614,
+       427928
+      ],
+      [
+       147711,
+       6491547
+      ]
+     ],
+     "per_frame_floor_iou_mean": 0.9179526114512517,
+     "per_frame_floor_iou_min": 0.3223326522838245,
+     "n_objects": 32,
+     "n_objects_hidden": 5,
+     "object_recall@50": 0.875,
+     "object_recall@80": 0.75,
+     "false_floor_rate_on_obstacle_px": 0.24926659039280305
+    },
+    "per_frame": {
+     "000_spot1_001": {
+      "floor_iou": 0.9725586522739548,
+      "miou": 0.9757272857154647,
+      "pixel_acc": 0.9879264322916667
+     },
+     "003_spot1_049": {
+      "floor_iou": 0.9753238741517581,
+      "miou": 0.984882670405242,
+      "pixel_acc": 0.9954427083333334
+     },
+     "006_straight1_102": {
+      "floor_iou": 0.9733799662042677,
+      "miou": 0.9774536508014227,
+      "pixel_acc": 0.988974609375
+     },
+     "007_straightB_090": {
+      "floor_iou": 0.6042070521805692,
+      "miou": 0.7213190150299448,
+      "pixel_acc": 0.8703971354166666
+     },
+     "008_straight2_rf2o_100": {
+      "floor_iou": 0.991118634150419,
+      "miou": 0.991693712767562,
+      "pixel_acc": 0.995849609375
+     },
+     "009_spot1_074": {
+      "floor_iou": 0.9384118271954675,
+      "miou": 0.9519168884134617,
+      "pixel_acc": 0.977353515625
+     },
+     "012_spot1_023": {
+      "floor_iou": 0.964633662805517,
+      "miou": 0.9677080655583162,
+      "pixel_acc": 0.983740234375
+     },
+     "015_spot1_036": {
+      "floor_iou": 0.9719537364366431,
+      "miou": 0.9795049790868514,
+      "pixel_acc": 0.991064453125
+     },
+     "018_straight1_016": {
+      "floor_iou": 0.9725083062215499,
+      "miou": 0.9742956652886019,
+      "pixel_acc": 0.9870442708333333
+     },
+     "019_straightB_044": {
+      "floor_iou": 0.8578777518612007,
+      "miou": 0.9113926632774458,
+      "pixel_acc": 0.9710416666666667
+     },
+     "020_spot1_061": {
+      "floor_iou": 0.9158472960770543,
+      "miou": 0.9435966945765715,
+      "pixel_acc": 0.9781575520833333
+     },
+     "023_straight2_rf2o_046": {
+      "floor_iou": 0.9758331007945483,
+      "miou": 0.97847663484307,
+      "pixel_acc": 0.989287109375
+     },
+     "024_spot1_088": {
+      "floor_iou": 0.9891743168161166,
+      "miou": 0.9894680485346341,
+      "pixel_acc": 0.9947102864583334
+     },
+     "027_spot1_011": {
+      "floor_iou": 0.988851862260944,
+      "miou": 0.9892008709136916,
+      "pixel_acc": 0.9945768229166667
+     },
+     "030_straight1_095": {
+      "floor_iou": 0.9806439397199439,
+      "miou": 0.9845033232838922,
+      "pixel_acc": 0.9926790364583333
+     },
+     "031_straightB_074": {
+      "floor_iou": 0.5248550420001428,
+      "miou": 0.6381654966131668,
+      "pixel_acc": 0.8050065104166667
+     },
+     "032_spot1_017": {
+      "floor_iou": 0.9948464392312198,
+      "miou": 0.9951776060070091,
+      "pixel_acc": 0.9975944010416666
+     },
+     "035_spot1_030": {
+      "floor_iou": 0.9542707543245822,
+      "miou": 0.9623951645372871,
+      "pixel_acc": 0.981748046875
+     },
+     "037_straight2_rf2o_068": {
+      "floor_iou": 0.9733234986784682,
+      "miou": 0.9770450863656024,
+      "pixel_acc": 0.9886979166666666
+     },
+     "039_spot1_043": {
+      "floor_iou": 0.970245641247446,
+      "miou": 0.9810034050645149,
+      "pixel_acc": 0.993505859375
+     },
+     "042_straight1_070": {
+      "floor_iou": 0.9764999376325308,
+      "miou": 0.9808041525429676,
+      "pixel_acc": 0.99080078125
+     },
+     "043_straightB_030": {
+      "floor_iou": 0.9754878347324115,
+      "miou": 0.9792941179944963,
+      "pixel_acc": 0.9898958333333333
+     },
+     "044_spot1_055": {
+      "floor_iou": 0.980101772240744,
+      "miou": 0.9877950136905547,
+      "pixel_acc": 0.99630859375
+     },
+     "047_spot1_068": {
+      "floor_iou": 0.9430542883211679,
+      "miou": 0.960407520798017,
+      "pixel_acc": 0.9837467447916667
+     },
+     "050_spot1_081": {
+      "floor_iou": 0.9817155854949478,
+      "miou": 0.9835899970803319,
+      "pixel_acc": 0.9918359375
+     },
+     "052_straight2_rf2o_028": {
+      "floor_iou": 0.9684441712537382,
+      "miou": 0.9705406425625134,
+      "pixel_acc": 0.985126953125
+     },
+     "054_straight1_091": {
+      "floor_iou": 0.9437571498610884,
+      "miou": 0.9539263258786254,
+      "pixel_acc": 0.9775944010416666
+     },
+     "055_straightB_081": {
+      "floor_iou": 0.579585421135359,
+      "miou": 0.6891269005959172,
+      "pixel_acc": 0.8424088541666667
+     },
+     "056_spot1_094": {
+      "floor_iou": 0.9666702761234435,
+      "miou": 0.9700136921784727,
+      "pixel_acc": 0.984970703125
+     },
+     "059_spot1_004": {
+      "floor_iou": 0.9781767439184037,
+      "miou": 0.9802278046959898,
+      "pixel_acc": 0.9901236979166667
+     },
+     "062_spot1_007": {
+      "floor_iou": 0.9777473977720327,
+      "miou": 0.9787710749076473,
+      "pixel_acc": 0.989296875
+     },
+     "065_straight1_034": {
+      "floor_iou": 0.9774908746789239,
+      "miou": 0.978504955144985,
+      "pixel_acc": 0.98916015625
+     },
+     "066_straightB_051": {
+      "floor_iou": 0.3223326522838245,
+      "miou": 0.4734793008982999,
+      "pixel_acc": 0.681494140625
+     },
+     "067_straight2_rf2o_082": {
+      "floor_iou": 0.9879023880216886,
+      "miou": 0.9883035800886155,
+      "pixel_acc": 0.9941243489583333
+     },
+     "068_spot1_014": {
+      "floor_iou": 0.9926509759995629,
+      "miou": 0.9930016689440426,
+      "pixel_acc": 0.9964973958333333
+     },
+     "071_spot1_020": {
+      "floor_iou": 0.9860989275304904,
+      "miou": 0.9871945930491335,
+      "pixel_acc": 0.993603515625
+     },
+     "074_spot1_026": {
+      "floor_iou": 0.9643813465660859,
+      "miou": 0.9686398648060274,
+      "pixel_acc": 0.9843684895833333
+     },
+     "077_straight1_078": {
+      "floor_iou": 0.8410635419892114,
+      "miou": 0.8727214142491906,
+      "pixel_acc": 0.9365071614583333
+     },
+     "078_straightB_039": {
+      "floor_iou": 0.9595456233750155,
+      "miou": 0.9706200224327562,
+      "pixel_acc": 0.987236328125
+     },
+     "079_spot1_033": {
+      "floor_iou": 0.9507637366522876,
+      "miou": 0.9614318978790435,
+      "pixel_acc": 0.9818684895833333
+     },
+     "082_straight2_rf2o_076": {
+      "floor_iou": 0.9694140998089781,
+      "miou": 0.9731464377758585,
+      "pixel_acc": 0.9866569010416667
+     },
+     "083_spot1_039": {
+      "floor_iou": 0.9880848081303663,
+      "miou": 0.9919570079713578,
+      "pixel_acc": 0.9969010416666667
+     },
+     "086_spot1_046": {
+      "floor_iou": 0.9632609635269475,
+      "miou": 0.9771972885805613,
+      "pixel_acc": 0.9928059895833333
+     },
+     "089_straight1_058": {
+      "floor_iou": 0.9663612346343913,
+      "miou": 0.9699310659443678,
+      "pixel_acc": 0.9849544270833334
+     },
+     "090_straightB_019": {
+      "floor_iou": 0.9756537681441863,
+      "miou": 0.9780233614306933,
+      "pixel_acc": 0.9890201822916667
+     },
+     "091_spot1_052": {
+      "floor_iou": 0.9802338479442838,
+      "miou": 0.9879711960828117,
+      "pixel_acc": 0.9964615885416667
+     },
+     "094_spot1_058": {
+      "floor_iou": 0.9217256401416617,
+      "miou": 0.9508077031335449,
+      "pixel_acc": 0.983740234375
+     },
+     "096_straight2_rf2o_055": {
+      "floor_iou": 0.9799517458720716,
+      "miou": 0.9829871381956408,
+      "pixel_acc": 0.9916959635416667
+     },
+     "098_spot1_064": {
+      "floor_iou": 0.929057681190198,
+      "miou": 0.9513686420430929,
+      "pixel_acc": 0.9804264322916667
+     },
+     "101_straight1_028": {
+      "floor_iou": 0.9753052843427887,
+      "miou": 0.9765629721745699,
+      "pixel_acc": 0.9881770833333333
+     },
+     "102_straightB_086": {
+      "floor_iou": 0.6164658634538153,
+      "miou": 0.7241107526516871,
+      "pixel_acc": 0.867568359375
+     },
+     "103_spot1_071": {
+      "floor_iou": 0.9505665844695407,
+      "miou": 0.962906471866829,
+      "pixel_acc": 0.9832291666666667
+     },
+     "106_spot1_077": {
+      "floor_iou": 0.9843082034115535,
+      "miou": 0.9872686640377659,
+      "pixel_acc": 0.9939420572916666
+     },
+     "109_spot1_084": {
+      "floor_iou": 0.9907814891755959,
+      "miou": 0.9912326314895876,
+      "pixel_acc": 0.9956087239583333
+     },
+     "111_straight2_rf2o_041": {
+      "floor_iou": 0.9755324652927482,
+      "miou": 0.9778357026098017,
+      "pixel_acc": 0.988916015625
+     },
+     "113_straight1_083": {
+      "floor_iou": 0.8021647395761924,
+      "miou": 0.836756781711598,
+      "pixel_acc": 0.9154524739583333
+     },
+     "114_straightB_063": {
+      "floor_iou": 0.5029743127534926,
+      "miou": 0.6137589413863619,
+      "pixel_acc": 0.78458984375
+     },
+     "115_spot1_091": {
+      "floor_iou": 0.9744562827667851,
+      "miou": 0.9756560394655374,
+      "pixel_acc": 0.9877083333333333
+     },
+     "118_spot1_097": {
+      "floor_iou": 0.9695690607734807,
+      "miou": 0.9730207290642738,
+      "pixel_acc": 0.986552734375
+     }
+    },
+    "objects": [
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 20380,
+      "notfloor_frac": 0.9802747791952895,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_box",
+      "px": 6904,
+      "notfloor_frac": 0.9898609501738123,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_book",
+      "px": 6275,
+      "notfloor_frac": 0.9947410358565737,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 4,
+      "label": "obstacle_shoe",
+      "px": 2184,
+      "notfloor_frac": 0.9276556776556777,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 5,
+      "label": "obstacle_other",
+      "px": 25558,
+      "notfloor_frac": 0.996439471007121,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 4,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 5,
+      "label": "obstacle_book",
+      "px": 75813,
+      "notfloor_frac": 0.6862279556276628,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_cable",
+      "px": 895,
+      "notfloor_frac": 0.49385474860335193,
+      "frame": "009_spot1_074"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 12117,
+      "notfloor_frac": 0.998844598497978,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_other",
+      "px": 2353,
+      "notfloor_frac": 0.9949001274968126,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_box",
+      "px": 6992,
+      "notfloor_frac": 0.9888443935926774,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 9196,
+      "notfloor_frac": 0.7223792953458025,
+      "frame": "020_spot1_061"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_shoe",
+      "px": 1524,
+      "notfloor_frac": 0.8077427821522309,
+      "frame": "024_spot1_088"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 77151,
+      "notfloor_frac": 0.30470117043200995,
+      "frame": "031_straightB_074"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 30273,
+      "notfloor_frac": 0.9928979618802233,
+      "frame": "043_straightB_030"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 12038,
+      "notfloor_frac": 0.8115135404552252,
+      "frame": "047_spot1_068"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 79034,
+      "notfloor_frac": 0.4831464939140117,
+      "frame": "055_straightB_081"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_box",
+      "px": 6743,
+      "notfloor_frac": 1.0,
+      "frame": "055_straightB_081"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 18759,
+      "notfloor_frac": 0.9206247667786129,
+      "frame": "056_spot1_094"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 8679,
+      "notfloor_frac": 0.9208434151399931,
+      "frame": "062_spot1_007"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 8919,
+      "notfloor_frac": 0.9780244422020405,
+      "frame": "065_straight1_034"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 57925,
+      "notfloor_frac": 0.9891929218817437,
+      "frame": "078_straightB_039"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 167574,
+      "notfloor_frac": 0.995118574480528,
+      "frame": "083_spot1_039"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 19737,
+      "notfloor_frac": 0.9998986674773268,
+      "frame": "089_straight1_058"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 19112,
+      "notfloor_frac": 0.9751988279614902,
+      "frame": "090_straightB_019"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 9415,
+      "notfloor_frac": 0.9738714816781732,
+      "frame": "098_spot1_064"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_cable",
+      "px": 13596,
+      "notfloor_frac": 0.7933215651662253,
+      "frame": "098_spot1_064"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 10354,
+      "notfloor_frac": 0.9669692872319876,
+      "frame": "101_straight1_028"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "102_straightB_086"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_book",
+      "px": 77050,
+      "notfloor_frac": 0.6205970149253731,
+      "frame": "102_straightB_086"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_cable",
+      "px": 13081,
+      "notfloor_frac": 0.8513875086002599,
+      "frame": "103_spot1_071"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 79040,
+      "notfloor_frac": 0.2231907894736842,
+      "frame": "114_straightB_063"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 5831,
+      "notfloor_frac": 0.9849082490138913,
+      "frame": "115_spot1_091"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 21881,
+      "notfloor_frac": 0.9700196517526621,
+      "frame": "118_spot1_097"
+     }
+    ]
+   }
+  },
+  "240x320": {
+   "A": {
+    "summary": {
+     "floor_iou": 0.9074557060061329,
+     "notfloor_iou": 0.9435443273422195,
+     "miou": 0.9255000166741763,
+     "pixel_acc": 0.9636610059145481,
+     "false_obstacle_rate_on_floor": 0.027247472533828327,
+     "false_floor_rate_on_notfloor": 0.04159438013460749,
+     "valid_px": 18124800,
+     "n_frames": 59,
+     "confusion_[[TN,FP],[FN,TP]]": [
+      [
+       11007808,
+       477734
+      ],
+      [
+       180903,
+       6458355
+      ]
+     ],
+     "per_frame_floor_iou_mean": 0.9096357853453317,
+     "per_frame_floor_iou_min": 0.3185375626043406,
+     "n_objects": 32,
+     "n_objects_hidden": 5,
+     "object_recall@50": 0.9375,
+     "object_recall@80": 0.6875,
+     "false_floor_rate_on_obstacle_px": 0.2633025994529906
+    },
+    "per_frame": {
+     "000_spot1_001": {
+      "floor_iou": 0.9285746003552398,
+      "miou": 0.9377343180226766,
+      "pixel_acc": 0.968583984375
+     },
+     "003_spot1_049": {
+      "floor_iou": 0.9713412911428168,
+      "miou": 0.982452846363665,
+      "pixel_acc": 0.994716796875
+     },
+     "006_straight1_102": {
+      "floor_iou": 0.9397935209348955,
+      "miou": 0.9485654155650616,
+      "pixel_acc": 0.9743912760416666
+     },
+     "007_straightB_090": {
+      "floor_iou": 0.8002034874281571,
+      "miou": 0.8605360044419904,
+      "pixel_acc": 0.939912109375
+     },
+     "008_straight2_rf2o_100": {
+      "floor_iou": 0.9901966264656148,
+      "miou": 0.990859360794881,
+      "pixel_acc": 0.9954329427083334
+     },
+     "009_spot1_074": {
+      "floor_iou": 0.9120766002005519,
+      "miou": 0.9318037622148543,
+      "pixel_acc": 0.9677473958333334
+     },
+     "012_spot1_023": {
+      "floor_iou": 0.9568366718355036,
+      "miou": 0.9607041000185277,
+      "pixel_acc": 0.98015625
+     },
+     "015_spot1_036": {
+      "floor_iou": 0.9614876963216862,
+      "miou": 0.9719176566015336,
+      "pixel_acc": 0.9877473958333334
+     },
+     "018_straight1_016": {
+      "floor_iou": 0.9480301589457955,
+      "miou": 0.9511941215355233,
+      "pixel_acc": 0.9750944010416667
+     },
+     "019_straightB_044": {
+      "floor_iou": 0.8291107432152782,
+      "miou": 0.8915354878121559,
+      "pixel_acc": 0.9623665364583334
+     },
+     "020_spot1_061": {
+      "floor_iou": 0.9295224478854182,
+      "miou": 0.9529835428723288,
+      "pixel_acc": 0.9820279947916667
+     },
+     "023_straight2_rf2o_046": {
+      "floor_iou": 0.9548353122790818,
+      "miou": 0.9595122024260396,
+      "pixel_acc": 0.979619140625
+     },
+     "024_spot1_088": {
+      "floor_iou": 0.9775282396454633,
+      "miou": 0.9782605594521789,
+      "pixel_acc": 0.9890234375
+     },
+     "027_spot1_011": {
+      "floor_iou": 0.9854553486566445,
+      "miou": 0.985935818304418,
+      "pixel_acc": 0.9929264322916667
+     },
+     "030_straight1_095": {
+      "floor_iou": 0.9445085159370874,
+      "miou": 0.9551568957001564,
+      "pixel_acc": 0.9783854166666667
+     },
+     "031_straightB_074": {
+      "floor_iou": 0.5579908458469178,
+      "miou": 0.6613700946677108,
+      "pixel_acc": 0.8186165364583333
+     },
+     "032_spot1_017": {
+      "floor_iou": 0.9886459473210988,
+      "miou": 0.9893972376727413,
+      "pixel_acc": 0.994697265625
+     },
+     "035_spot1_030": {
+      "floor_iou": 0.9448334463572263,
+      "miou": 0.9547929101497291,
+      "pixel_acc": 0.9780208333333333
+     },
+     "037_straight2_rf2o_068": {
+      "floor_iou": 0.9600039464796642,
+      "miou": 0.9654203576964386,
+      "pixel_acc": 0.9828450520833333
+     },
+     "039_spot1_043": {
+      "floor_iou": 0.96365614150114,
+      "miou": 0.9767998268219839,
+      "pixel_acc": 0.992060546875
+     },
+     "042_straight1_070": {
+      "floor_iou": 0.9550013487334167,
+      "miou": 0.9630418367469403,
+      "pixel_acc": 0.982080078125
+     },
+     "043_straightB_030": {
+      "floor_iou": 0.9433851039079448,
+      "miou": 0.9524512002777337,
+      "pixel_acc": 0.976552734375
+     },
+     "044_spot1_055": {
+      "floor_iou": 0.9550970455407315,
+      "miou": 0.9723755817200502,
+      "pixel_acc": 0.9915201822916667
+     },
+     "047_spot1_068": {
+      "floor_iou": 0.9604768390784526,
+      "miou": 0.9726837679210399,
+      "pixel_acc": 0.9889485677083333
+     },
+     "050_spot1_081": {
+      "floor_iou": 0.961484042242838,
+      "miou": 0.9656851980797183,
+      "pixel_acc": 0.9828092447916666
+     },
+     "052_straight2_rf2o_028": {
+      "floor_iou": 0.9362204937071247,
+      "miou": 0.9400875581468898,
+      "pixel_acc": 0.9692513020833333
+     },
+     "054_straight1_091": {
+      "floor_iou": 0.946319495619422,
+      "miou": 0.9560535096165639,
+      "pixel_acc": 0.9786588541666666
+     },
+     "055_straightB_081": {
+      "floor_iou": 0.6345035669988829,
+      "miou": 0.7288734775552292,
+      "pixel_acc": 0.86474609375
+     },
+     "056_spot1_094": {
+      "floor_iou": 0.9325920980056318,
+      "miou": 0.940308360138798,
+      "pixel_acc": 0.969765625
+     },
+     "059_spot1_004": {
+      "floor_iou": 0.9539897132348716,
+      "miou": 0.9586315820198223,
+      "pixel_acc": 0.979150390625
+     },
+     "062_spot1_007": {
+      "floor_iou": 0.9677849739195731,
+      "miou": 0.9691397375139741,
+      "pixel_acc": 0.9843587239583333
+     },
+     "065_straight1_034": {
+      "floor_iou": 0.9584885329644016,
+      "miou": 0.9601114804714219,
+      "pixel_acc": 0.9796842447916667
+     },
+     "066_straightB_051": {
+      "floor_iou": 0.3185375626043406,
+      "miou": 0.46264181934855964,
+      "pixel_acc": 0.6678092447916667
+     },
+     "067_straight2_rf2o_082": {
+      "floor_iou": 0.9874811848188367,
+      "miou": 0.9879276910758521,
+      "pixel_acc": 0.993935546875
+     },
+     "068_spot1_014": {
+      "floor_iou": 0.9894473529532376,
+      "miou": 0.9899708598786997,
+      "pixel_acc": 0.9949739583333334
+     },
+     "071_spot1_020": {
+      "floor_iou": 0.9827185840707965,
+      "miou": 0.984111279968245,
+      "pixel_acc": 0.9920540364583333
+     },
+     "074_spot1_026": {
+      "floor_iou": 0.9566867604375977,
+      "miou": 0.9620545473052808,
+      "pixel_acc": 0.9810546875
+     },
+     "077_straight1_078": {
+      "floor_iou": 0.8140347272166855,
+      "miou": 0.8494025625055077,
+      "pixel_acc": 0.9234049479166667
+     },
+     "078_straightB_039": {
+      "floor_iou": 0.940284581292279,
+      "miou": 0.9564165170561317,
+      "pixel_acc": 0.9808333333333333
+     },
+     "079_spot1_033": {
+      "floor_iou": 0.9407373296375342,
+      "miou": 0.9537194965308051,
+      "pixel_acc": 0.9782161458333334
+     },
+     "082_straight2_rf2o_076": {
+      "floor_iou": 0.945339546297784,
+      "miou": 0.9516196285768141,
+      "pixel_acc": 0.9756380208333333
+     },
+     "083_spot1_039": {
+      "floor_iou": 0.9888478637630924,
+      "miou": 0.9924805014642339,
+      "pixel_acc": 0.997109375
+     },
+     "086_spot1_046": {
+      "floor_iou": 0.953716480191518,
+      "miou": 0.971286518185523,
+      "pixel_acc": 0.9909375
+     },
+     "089_straight1_058": {
+      "floor_iou": 0.9518733639336654,
+      "miou": 0.9570740661537251,
+      "pixel_acc": 0.9783951822916667
+     },
+     "090_straightB_019": {
+      "floor_iou": 0.931041932208516,
+      "miou": 0.9386083309930495,
+      "pixel_acc": 0.968828125
+     },
+     "091_spot1_052": {
+      "floor_iou": 0.9790660812214186,
+      "miou": 0.9872664286530983,
+      "pixel_acc": 0.996259765625
+     },
+     "094_spot1_058": {
+      "floor_iou": 0.917616263577799,
+      "miou": 0.9482393563271188,
+      "pixel_acc": 0.982890625
+     },
+     "096_straight2_rf2o_055": {
+      "floor_iou": 0.9538106058279854,
+      "miou": 0.9604608293175259,
+      "pixel_acc": 0.9804134114583334
+     },
+     "098_spot1_064": {
+      "floor_iou": 0.9294057897409853,
+      "miou": 0.9516246926036334,
+      "pixel_acc": 0.9805436197916667
+     },
+     "101_straight1_028": {
+      "floor_iou": 0.9459068690848074,
+      "miou": 0.9481750606307868,
+      "pixel_acc": 0.9734505208333334
+     },
+     "102_straightB_086": {
+      "floor_iou": 0.7202262430381208,
+      "miou": 0.7975178889579179,
+      "pixel_acc": 0.905322265625
+     },
+     "103_spot1_071": {
+      "floor_iou": 0.9365376229468482,
+      "miou": 0.9527169815390605,
+      "pixel_acc": 0.978681640625
+     },
+     "106_spot1_077": {
+      "floor_iou": 0.9575147928994083,
+      "miou": 0.9657988452497619,
+      "pixel_acc": 0.9836393229166667
+     },
+     "109_spot1_084": {
+      "floor_iou": 0.9831932773109243,
+      "miou": 0.9840870376183055,
+      "pixel_acc": 0.9920052083333334
+     },
+     "111_straight2_rf2o_041": {
+      "floor_iou": 0.954411900058764,
+      "miou": 0.9585309227665685,
+      "pixel_acc": 0.9790397135416666
+     },
+     "113_straight1_083": {
+      "floor_iou": 0.8010148221418486,
+      "miou": 0.8349904954600331,
+      "pixel_acc": 0.9142154947916666
+     },
+     "114_straightB_063": {
+      "floor_iou": 0.46403831583504707,
+      "miou": 0.5659951180858358,
+      "pixel_acc": 0.7420963541666666
+     },
+     "115_spot1_091": {
+      "floor_iou": 0.9451699397537997,
+      "miou": 0.9478633891428498,
+      "pixel_acc": 0.9733072916666666
+     },
+     "118_spot1_097": {
+      "floor_iou": 0.9298766998023658,
+      "miou": 0.9386856235821966,
+      "pixel_acc": 0.9690462239583333
+     }
+    },
+    "objects": [
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 20380,
+      "notfloor_frac": 0.9796859666339549,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_box",
+      "px": 6904,
+      "notfloor_frac": 0.9746523754345308,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_book",
+      "px": 6275,
+      "notfloor_frac": 1.0,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 4,
+      "label": "obstacle_shoe",
+      "px": 2184,
+      "notfloor_frac": 0.9542124542124543,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 5,
+      "label": "obstacle_other",
+      "px": 25558,
+      "notfloor_frac": 0.998121918772987,
+      "frame": "000_spot1_001"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 4,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 5,
+      "label": "obstacle_book",
+      "px": 75813,
+      "notfloor_frac": 0.7927664120929129,
+      "frame": "007_straightB_090"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_cable",
+      "px": 895,
+      "notfloor_frac": 0.6346368715083799,
+      "frame": "009_spot1_074"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 12117,
+      "notfloor_frac": 0.9847321944375671,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_other",
+      "px": 2353,
+      "notfloor_frac": 0.9995750106247344,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 3,
+      "label": "obstacle_box",
+      "px": 6992,
+      "notfloor_frac": 0.9968535469107551,
+      "frame": "019_straightB_044"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 9196,
+      "notfloor_frac": 0.7154197477163984,
+      "frame": "020_spot1_061"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_shoe",
+      "px": 1524,
+      "notfloor_frac": 0.8149606299212598,
+      "frame": "024_spot1_088"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 77151,
+      "notfloor_frac": 0.3031976254358336,
+      "frame": "031_straightB_074"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 30273,
+      "notfloor_frac": 0.9787599511115516,
+      "frame": "043_straightB_030"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 12038,
+      "notfloor_frac": 0.8508888519687656,
+      "frame": "047_spot1_068"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 79034,
+      "notfloor_frac": 0.5002783612116304,
+      "frame": "055_straightB_081"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_box",
+      "px": 6743,
+      "notfloor_frac": 1.0,
+      "frame": "055_straightB_081"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 18759,
+      "notfloor_frac": 0.9285676208753132,
+      "frame": "056_spot1_094"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 8679,
+      "notfloor_frac": 0.8886968544763222,
+      "frame": "062_spot1_007"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 8919,
+      "notfloor_frac": 0.6898755465859401,
+      "frame": "065_straight1_034"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 57925,
+      "notfloor_frac": 0.9617091066033664,
+      "frame": "078_straightB_039"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 167574,
+      "notfloor_frac": 0.9967835105684653,
+      "frame": "083_spot1_039"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 19737,
+      "notfloor_frac": 0.956984344125247,
+      "frame": "089_straight1_058"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 19112,
+      "notfloor_frac": 0.9582461280870657,
+      "frame": "090_straightB_019"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 9415,
+      "notfloor_frac": 0.9597450876261285,
+      "frame": "098_spot1_064"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_cable",
+      "px": 13596,
+      "notfloor_frac": 0.7138864371874081,
+      "frame": "098_spot1_064"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 10354,
+      "notfloor_frac": 0.5729186787714893,
+      "frame": "101_straight1_028"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_other",
+      "px": 0,
+      "notfloor_frac": null,
+      "frame": "102_straightB_086"
+     },
+     {
+      "id": 2,
+      "label": "obstacle_book",
+      "px": 77050,
+      "notfloor_frac": 0.6472290720311487,
+      "frame": "102_straightB_086"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_cable",
+      "px": 13081,
+      "notfloor_frac": 0.9406008714930051,
+      "frame": "103_spot1_071"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 79040,
+      "notfloor_frac": 0.03595647773279352,
+      "frame": "114_straightB_063"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_box",
+      "px": 5831,
+      "notfloor_frac": 1.0,
+      "frame": "115_spot1_091"
+     },
+     {
+      "id": 1,
+      "label": "obstacle_book",
+      "px": 21881,
+      "notfloor_frac": 0.9654494767149582,
+      "frame": "118_spot1_097"
+     }
+    ]
+   }
+  }
+ },
+ "train_fit": {
+  "360x480": {
+   "all": {
+    "floor_iou": 0.9903339927529784,
+    "notfloor_iou": 0.9933026203535608,
+    "miou": 0.9918183065532695,
+    "pixel_acc": 0.9960280808346251,
+    "false_obstacle_rate_on_floor": 0.004984220124232043,
+    "false_floor_rate_on_notfloor": 0.0032714089017539354,
+    "valid_px": 27923529,
+    "n_frames": 91,
+    "confusion_[[TN,FP],[FN,TP]]": [
+     [
+      16449298,
+      53989
+     ],
+     [
+      56921,
+      11363321
+     ]
+    ],
+    "per_frame_floor_iou_mean": 0.9901888982550349,
+    "per_frame_floor_iou_min": 0.974833698124544,
+    "n_objects": 89,
+    "n_objects_hidden": 0,
+    "object_recall@50": 1.0,
+    "object_recall@80": 0.9887640449438202,
+    "false_floor_rate_on_obstacle_px": 0.008656146799204357
+   }
+  }
+ },
+ "eval_time_s": 7.993281602859497
+}
