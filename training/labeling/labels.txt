@@ -1,0 +1,9 @@
+floor
+obstacle_book
+obstacle_shoe
+obstacle_box
+obstacle_cup
+obstacle_cable
+obstacle_leg
+obstacle_other
+ignore
