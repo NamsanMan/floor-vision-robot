@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+# 모델과 데이터는 올리지 않는다
+*.onnx
+*.pth
+*.pt
+frames/
+data/
+dsnet_src/

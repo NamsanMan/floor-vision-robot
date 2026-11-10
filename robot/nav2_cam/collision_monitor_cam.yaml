@@ -1,0 +1,49 @@
+# 초안: Nav2 Collision Monitor (Humble 1.1.15 파라미터 이름 기준). 구역 크기는 ② 제동 거리 실측 뒤 확정.
+# 로봇 외곽(실측): x ±0.11m, y ±0.09m (nav2_params.yaml footprint와 같음). 앞면 = x 0.11.
+collision_monitor:
+  ros__parameters:
+    base_frame_id: "base_footprint"
+    odom_frame_id: "odom"
+    cmd_vel_in_topic: "cmd_vel_smoothed"     # velocity_smoother 출력 (런치 리매핑 변경 필요)
+    cmd_vel_out_topic: "cmd_vel"             # 모터 컨트롤러가 받는 토픽
+    transform_tolerance: 0.2
+    source_timeout: 1.0                      # 입력이 1초 넘게 끊기면 그 소스는 무시(Humble 동작) -> 기억 노드 생존 감시는 별도로
+    stop_pub_timeout: 2.0
+    polygons: ["PolygonStop", "PolygonSlow", "FootprintApproach"]
+    PolygonStop:
+      type: "polygon"
+      points: [0.16, 0.10, 0.16, -0.10, 0.0, -0.10, 0.0, 0.10]     # 앞면 + 5cm 안에 점이 있으면 정지
+      action_type: "stop"
+      max_points: 2                          # 점 2개 이상이면 작동(한 점짜리 잡음 무시)
+      visualize: True
+      polygon_pub_topic: "polygon_stop"
+    PolygonSlow:
+      type: "polygon"
+      points: [0.40, 0.14, 0.40, -0.14, 0.0, -0.14, 0.0, 0.14]     # 앞면 + 30cm 안이면 감속
+      action_type: "slowdown"
+      max_points: 2
+      slowdown_ratio: 0.3
+      visualize: True
+      polygon_pub_topic: "polygon_slowdown"
+    FootprintApproach:
+      type: "polygon"
+      action_type: "approach"
+      footprint_topic: "/local_costmap/published_footprint"
+      time_before_collision: 1.2             # 지금 속도로 1.2초 안에 닿을 것 같으면 속도를 줄임
+      simulation_time_step: 0.1
+      max_points: 2
+      visualize: False
+    observation_sources: ["floor_memory", "scan", "watchdog"]
+    floor_memory:
+      type: "pointcloud"
+      topic: "/floor_obstacles/memory"       # 사각지대 장애물까지 포함한 기억 점 (Collision Monitor는 코스트맵을 안 보므로 필수)
+      min_height: -0.05
+      max_height: 0.30
+    scan:
+      type: "scan"
+      topic: "/scan_raw"
+    watchdog:                                # 2026-10-29 조용한 실패 대책: 카메라 데이터가 끊기거나 늦으면 감시 노드가 정지 구역 안에 점을 넣음
+      type: "pointcloud"
+      topic: "/floor_obstacles/watchdog"     # base_footprint 좌표라 TF가 밀려도 변환이 필요 없다. 정상일 땐 빈 점구름
+      min_height: -0.05
+      max_height: 0.30
