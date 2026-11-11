@@ -15,7 +15,9 @@
 4. 카메라 바로 앞(로봇 중심에서 0.29 m 안)은 화면에 안 보여서, 봐 둔 point를 odom 좌표로 기억해 두고 사각지대 안에서도 멈출 수 있게 했다.
 5. Nav2 코스트맵(local, global)과 Collision Monitor가 이 point를 쓴다. 만약, 인식 노드(floor_seg_node)가 0.6초 넘게 반응이 없다면 감시 노드(floor_watchdog)가 로봇을 세운다(안전장치).
 
-![Costmap mark and clear](media/git_04_costmap_mark_clear.gif)
+![Floor segmentation to costmap](media/floor_seg_pipeline.png)
+
+코스트맵에서 칸을 지우는 방법과 사각지대 기억은 [robot 문서](robot/README.md#토픽)의 그림으로 정리했다.
 
 ## Test result (2026-10-31 실제 주행)
 
