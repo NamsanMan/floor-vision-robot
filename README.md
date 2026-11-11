@@ -73,7 +73,7 @@ Floor segmentation으로 물체 후보를 자르고, CLIP으로 text와 맞는 �
 
 | | |
 |---|---|
-| 로봇 | MentorPi M1(메카넘 바퀴), Raspberry Pi 5(NPU 없음), Raspberry Pi OS(Debian 12) |
+| 로봇 | MentorPi M1(메카넘 바퀴), Raspberry Pi 5 8GB(NPU 없음), Raspberry Pi OS(Debian 12) |
 | 카메라 | Angstrong depth camera의 RGB 영상만 사용(640×480, 초당 약 12.5장), 바닥에서 0.106 m, 아래로 2.45° |
 | LiDAR | MS200 2D LiDAR(바닥에서 16 cm 높이를 훑음) |
 | 로봇 소프트웨어 | 제조사 Docker 이미지(ROS 2 Humble, Python 3.10), Nav2(TEB), Collision Monitor, ONNX Runtime 1.23.2(CPU, 2스레드) |
